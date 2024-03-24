@@ -94,7 +94,7 @@ func addRoleHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Printf("Added role %s from user ID: %s\n", roleID, userID)
+	log.Printf("Added role %s to user ID: %s\n", roleID, userID)
 	response := Response{Message: "Role added successfully", Error: false}
 	jsonResponse, _ := json.Marshal(response)
 	w.Header().Set("Content-Type", "application/json")
